@@ -8,4 +8,7 @@ func main() {
 	slicesFun()
 	mapsFun()
 	structsFun()
+	functionsFun()
+	variadicFun()
+	methodsFun()
 }
