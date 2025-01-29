@@ -6,4 +6,5 @@ func main() {
 	loops()
 	arrays()
 	slicesFun()
+	mapsFun()
 }
