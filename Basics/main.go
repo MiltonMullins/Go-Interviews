@@ -1,10 +1,10 @@
 package main
 
 func main() {
-	dataTypes()
-	conditionals()
-	loops()
-	arrays()
+	dataTypesFun()
+	conditionalsFun()
+	loopsFun()
+	arraysFun()
 	slicesFun()
 	mapsFun()
 	structsFun()

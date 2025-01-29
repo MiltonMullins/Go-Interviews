@@ -7,7 +7,7 @@ Unlike other languages like C, Java, or JavaScript
 there are no parentheses surrounding the three components
 of the for statement and the braces { } are always required.
 */
-func loops() {
+func loopsFun() {
 
 	fmt.Println("\n-----LOOPS-----")
 

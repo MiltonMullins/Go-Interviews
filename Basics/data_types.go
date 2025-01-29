@@ -4,7 +4,7 @@ import "fmt"
 
 const PI = 3.14
 
-func dataTypes() {
+func dataTypesFun() {
 
 	fmt.Println("\n-----DATA TYPES-----")
 	//Constant - is unchangeable and read-only.
