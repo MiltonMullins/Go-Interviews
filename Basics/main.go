@@ -11,5 +11,6 @@ func main() {
 	functionsFun()
 	variadicFun()
 	pointersFun()
+	stringAndRunesFun()
 	methodsFun()
 }
