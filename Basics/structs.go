@@ -19,6 +19,8 @@ func newPerson(name string) *person {
 
 func structsFun() {
 
+	fmt.Println("\n-----STRUCTS-----")
+
     fmt.Println(person{"Bob", 20})
 
     fmt.Println(person{name: "Alice", age: 30})

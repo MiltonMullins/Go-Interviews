@@ -7,6 +7,8 @@ import (
 
 func mapsFun() {
 
+	fmt.Println("\n-----MAPS-----")
+
 	m := make(map[string]int)
 
 	m["k1"] = 7
