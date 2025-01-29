@@ -10,5 +10,6 @@ func main() {
 	structsFun()
 	functionsFun()
 	variadicFun()
+	pointersFun()
 	methodsFun()
 }
