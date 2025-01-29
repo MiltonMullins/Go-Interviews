@@ -6,6 +6,7 @@ const PI = 3.14
 
 func dataTypes() {
 
+	fmt.Println("\n-----DATA TYPES-----")
 	//Constant - is unchangeable and read-only.
 	fmt.Printf("CONSTANT PI: %f\n", PI)
 
