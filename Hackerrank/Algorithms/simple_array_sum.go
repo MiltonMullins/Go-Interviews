@@ -7,8 +7,12 @@ import (
 func simpleArraySum(ar []int32) int32 {
 	var sum int32 = 0
 
-	for i := 0; i < len(ar); i++ {
+/* 	for i := 0; i < len(ar); i++ {
 		sum += ar[i]
+	} */
+
+	for _, v := range ar {
+		sum += v
 	}
 	return sum
 }
