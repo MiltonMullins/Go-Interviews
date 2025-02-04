@@ -4,4 +4,5 @@ func main() {
 	goroutineFun()
 	channelsFun()
 	selectFun()
+	waitGroupsFun()
 }
