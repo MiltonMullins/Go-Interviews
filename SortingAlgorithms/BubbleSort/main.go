@@ -13,11 +13,16 @@ Space complexity: O(1)
 */
 
 func main() {
-	var n = []int{1, 39, 2, 9, 7, 54, 11}
+	var n = []int{100, 39, 2, 9, 7, 54, 11}
 
-	if len(n) == 1 {
-		fmt.Println(n)
+	/*
+	if len(n) {
+		return n
 	}
+	*/
+
+	fmt.Print("Unsorted Array: ")
+	fmt.Println(n)
 
 	var isDone = false
 
@@ -26,10 +31,13 @@ func main() {
 		for i := 0; i < len(n)-1; i++ {
 			if n[i] > n[i+1] {
 				n[i], n[i+1] = n[i+1], n[i] // swap line
+				fmt.Printf("Swap %v with %v -->",n[i], n[i+1])
+				fmt.Println(n)
 				isDone = false
 			}
 		}
 	}
 
+	fmt.Println("Bubble Sort:")
 	fmt.Println(n)
 }
