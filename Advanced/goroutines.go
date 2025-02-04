@@ -11,7 +11,7 @@ func f(from string) {
     }
 }
 
-func goroutine() {
+func goroutineFun() {
 
     f("direct")
 
