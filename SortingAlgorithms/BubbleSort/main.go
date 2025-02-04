@@ -15,13 +15,10 @@ Space complexity: O(1)
 func main() {
 	var n = []int{1, 39, 2, 9, 7, 54, 11}
 
-	fmt.Println(bubbleSort(n))
-}
-
-func bubbleSort(n []int) []int {
 	if len(n) == 1 {
-		return n
+		fmt.Println(n)
 	}
+
 	var isDone = false
 
 	for !isDone {
@@ -34,7 +31,5 @@ func bubbleSort(n []int) []int {
 		}
 	}
 
-	return n
+	fmt.Println(n)
 }
-
-
