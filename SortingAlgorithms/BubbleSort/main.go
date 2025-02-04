@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+/*
+Bubble sort is an algorithm that sort an array from the lowest to the highest value.
+It works by comparing each element in the array with the next element,
+if the current element is greater than the next element, it swaps the two elements.
+The algorithm continues to compare and swap the elements until no more swaps are needed.
+
+Time complexity: O(n^2)
+Space complexity: O(1)
+*/
+
+func main() {
+	var n = []int{1, 39, 2, 9, 7, 54, 11}
+
+	fmt.Println(bubbleSort(n))
+}
+
+func bubbleSort(n []int) []int {
+	if len(n) == 1 {
+		return n
+	}
+	var isDone = false
+
+	for !isDone {
+		isDone = true
+		for i := 0; i < len(n)-1; i++ {
+			if n[i] > n[i+1] {
+				n[i], n[i+1] = n[i+1], n[i] // swap line
+				isDone = false
+			}
+		}
+	}
+
+	return n
+}
+
+
