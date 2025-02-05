@@ -5,4 +5,5 @@ func main() {
 	channelsFun()
 	selectFun()
 	waitGroupsFun()
+	mutexesFun()
 }
