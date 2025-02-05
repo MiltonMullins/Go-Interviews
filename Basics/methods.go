@@ -14,6 +14,11 @@ func (r rect) perim() int {
     return 2*r.width + 2*r.height
 }
 
+type geometricForm struct {
+    area int
+    rectangle rect // This is Inheritance in Go
+}
+
 func methodsFun() {
 
 	fmt.Println("\n-----METHODS-----")
@@ -26,4 +31,12 @@ func methodsFun() {
     rp := &r
     fmt.Println("area: ", rp.area())
     fmt.Println("perim:", rp.perim())
+
+    g := geometricForm{
+        12,
+        r,
+    }
+
+    fmt.Println(g.area)
+    fmt.Println("perim: ", g.rectangle.perim())
 }
