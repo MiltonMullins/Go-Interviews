@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"sort"
+	"slices"
+	"cmp"
 )
 
 type person struct {
@@ -60,8 +62,15 @@ func structsFun() {
         {"Bob", 45},
         {"James", 25},
     }
+	// Sorting slices of structs - using the sort interface.
     sort.Sort(AgeFactor(audience))
     fmt.Println(audience) 
+
+	// Sorting slices of structs - using the SortFunc method from the slices package.
+	slices.SortFunc(audience,
+        func(a, b person) int {
+            return cmp.Compare(a.age, b.age)
+        })
 }
 
 type AgeFactor []person
