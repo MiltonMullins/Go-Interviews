@@ -9,16 +9,32 @@ and it should return false if every element is distinct.
 */
 package containsduplicate
 
+import "slices"
+
 //Brute Force Solution
 //Time Complexity: O(n^2)
 //Space Complexity: O(1)
-func containsDuplicate(nums []int) bool{
+func containsDuplicateBF(nums []int) bool{
 	//loop over array twice and compare
 	for i, v := range nums {
 		for j := i+1; j < len(nums); j++ {
 			if v == nums[j] {
 				return true
 			}
+		}
+	}
+	return false
+}
+
+//Sorting Solution
+//Time Complexity: O(n log n)
+//Space Complexity: O(1)
+func containsDuplicateSorting(nums []int) bool {
+	//soting the array you only need to loop one time and compare adjacetns positions
+	slices.Sort(nums)
+	for i := 0; i < len(nums)-1; i++ {
+		if nums[i] == nums[i+1] {
+			return true
 		}
 	}
 	return false
