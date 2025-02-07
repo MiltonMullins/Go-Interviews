@@ -9,7 +9,9 @@ and it should return false if every element is distinct.
 */
 package containsduplicate
 
-import "slices"
+import (
+	"slices"
+)
 
 //Brute Force Solution
 //Time Complexity: O(n^2)
@@ -37,5 +39,23 @@ func containsDuplicateSorting(nums []int) bool {
 			return true
 		}
 	}
+	return false
+}
+
+//Map Solution
+//Time Complexity: O(n)
+//Space Complexity: O(1)
+func containsDuplicateMap(nums []int) bool {
+	//create map
+	mNums := make(map[int]int)
+
+	//loop nums and add to map if not exist
+	for _, v := range nums {
+		if _, ok := mNums[v]; ok {
+			return true
+		}
+		mNums[v] = v
+	}
+
 	return false
 }

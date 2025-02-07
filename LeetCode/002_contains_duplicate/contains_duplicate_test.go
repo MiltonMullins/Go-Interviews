@@ -10,7 +10,7 @@ func TestContainsDuplicate(t *testing.T) {
 	numsTrue := []int{1, 2, 4, 56, 7, 8, 2}
 	numsFalse := []int{1, 2, 4, 56, 7, 8}
 
-	funcs := []func([]int) bool{containsDuplicateBF, containsDuplicateSorting}
+	funcs := []func([]int) bool{containsDuplicateBF, containsDuplicateSorting, containsDuplicateMap}
 
 	for _, testFunc := range funcs {
 		if res := testFunc(numsTrue); !reflect.DeepEqual(res, true){
