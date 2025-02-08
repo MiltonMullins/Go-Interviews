@@ -16,6 +16,8 @@ Tip: find local min and search for local max, sliding window;
 
 package maxprofit
 
+import "math"
+
 // Brute Force Solution
 // Time Complexity: O(n^2)
 // Space Complexity: O(1)
@@ -40,7 +42,7 @@ func maxProfitBF(prices []int) int {
 // for every price, find the max profit, then record the current minimum price.
 // time complexity: O(n)
 // space complexity: O(1)
-func maxProfit(prices []int) int {
+func maxProfitD1(prices []int) int {
 	if len(prices) == 0 || len(prices) == 1 {
 		return 0
 	}
@@ -57,4 +59,17 @@ func maxProfit(prices []int) int {
 		}
 	}
 	return maxProfit
+}
+
+//Solution using build-in min & max functions
+func maxProfit(prices []int) int {
+    minPrice := math.MaxInt32
+    maxProfit := 0
+    
+    for _, currentPrice := range prices {
+        minPrice = min(currentPrice, minPrice)
+        maxProfit = max(maxProfit, currentPrice - minPrice)
+    }
+    
+    return maxProfit
 }

@@ -16,7 +16,7 @@ func TestMaxProfit(t *testing.T) {
 
 	expected := []int{5, 0, 0, 0, 7, 10}
 
-	funcs := []func([]int) int{ maxProfitBF, maxProfit}
+	funcs := []func([]int) int{ maxProfitBF, maxProfitD1, maxProfit}
 
 	for index, prices := range testPrices {
 		for _, testFunc := range funcs {
