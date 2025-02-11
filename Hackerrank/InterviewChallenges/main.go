@@ -58,11 +58,13 @@ func main() {
 	wg.Wait()
 	close(ch)
 
+	//Print values buffered in the channel
 	for value := range ch {
 		println(value)
 	}
 }
 
+//Function used in Go Routines
 func checkCalendar(num int, calendar map[int]string, ch chan int, wg *sync.WaitGroup) {
 	if month, exist := calendar[num]; exist {
 		fmt.Println(month)
