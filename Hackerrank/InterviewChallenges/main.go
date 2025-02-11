@@ -34,8 +34,9 @@ func main() {
 
 	//Crear Slice
 	var randomNum = make([]int, 20)
-
+	// Cargar Slice con numeros random
 	for i := 0; i < 20; i++ {
+		//Se utiliza el paquete math/rand
 		randomNum[i] = rand.Intn(20)
 	}
 
