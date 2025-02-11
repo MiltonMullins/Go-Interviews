@@ -39,17 +39,20 @@ func main() {
 		//Se utiliza el paquete math/rand
 		randomNum[i] = rand.Intn(20)
 	}
-
+	//Print Slice
 	fmt.Println(randomNum)
+	//Print Map
 	fmt.Println(calendar)
 
-	//Crear Funcion
+	//Crear Channel Buffered 20
 	ch := make(chan int, 20)
-
+	//Se crea el Wait Group para poder sincronizar correctamente el cierre de los channels
 	var wg sync.WaitGroup
 	//Crear goroutines
 	for _, num := range randomNum {
+		//Se agrega un WG por cada go routine creada
 		wg.Add(1)
+		//Crear Funcion asincrona
 		go checkCalendar(num, calendar, ch, &wg)
 	}
 	wg.Wait()
