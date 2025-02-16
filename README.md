@@ -49,28 +49,16 @@ Garbage Collection: In computer science, garbage collection (GC) is a form of au
 ### **2. Inheritance**
 - **Java**: Supports **class inheritance** (`extends`) and **interface implementation** (`implements`).  
   ```java
-  class Car {
-    void charge()
-  }
-  
   class ElectricCar extends Car {
-    public void charge() { 
-      //Override method charge with new fuctionality
-    }
+    public void charge() { ... }
   }
   ```
 - **Go**: **No inheritance**. Uses **composition** (struct embedding) and **interfaces**.  
   ```go
-  type Car struct {
-    charged bool
-  }
-  
   type ElectricCar struct {
     Car // Embedded struct (composition)
   }
-  func (e *ElectricCar) Charge() { 
-    e.charged = true
-  }
+  func (e *ElectricCar) Charge() { ... }
   ```
 
 ---
