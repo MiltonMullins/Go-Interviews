@@ -172,3 +172,28 @@ As Rob Pike noted:
 *"Go is about composition, not inheritance."*  
 
 While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **composition** provides a pragmatic way to model real-world problems while maintaining readability and performance.
+
+
+---
+
+### REST
+
+**Representational State Transfer** is a software architecture that imposes conditions on how an API should work.
+Principles of the REST architectural style:
+1. **Statelessness**: Each request contains all the information needed to process it, and no client context is stored on the server.
+2. **Client-Server Separation**: The clien and server are independent of each other.
+3. **Uniform Interface**: Consistent and Standarized communication, typically via HTTP methods.
+4. **Cacheability**: Responses should indicate whether they can be cached for future use.
+5. **Layered System**: Architecture should allow for layers such as proxies, gateways, and load balancers.
+
+Benefits:
+1. Scalability
+2. Flexibility
+3. Independence
+
+RESTful API request contain:
+1. Unique Resourse Identifier (URI)
+2. Method (GET, POST, PUT, DELETE)
+3. HTTP Headers
+4. Data
+5. Parameters
