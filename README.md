@@ -2,27 +2,27 @@
 
 Go is described as a Statically-typed, compiled language designed by Google around a set of core principles that prioritize Simplicity, Readability, Maintanability and Efficiency.
 
-**Simplicity**: Go's syntax is designed to be straigthfoward to keep code readable, maintainable and easy to learn. By minimizing syntactic clutter such as requiring no parentheses around conditions in control structures or forcing explicit semicolon usage, the language reduces boilerplate and allows developers to focus on the logic.
+- **Simplicity**: Go's syntax is designed to be straigthfoward to keep code readable, maintainable and easy to learn. By minimizing syntactic clutter such as requiring no parentheses around conditions in control structures or forcing explicit semicolon usage, the language reduces boilerplate and allows developers to focus on the logic.
 
-**Readability**: because is clear, straigthfoward code is easier to maintain, debug and collaborate on. This focus on readability is reflected in Go's design choices such as minimalistic syntax, enforced formating with `gofmt` and explicit error handling.
+- **Readability**: because is clear, straigthfoward code is easier to maintain, debug and collaborate on. This focus on readability is reflected in Go's design choices such as minimalistic syntax, enforced formating with `gofmt` and explicit error handling.
 
-**Maintainability**: because it recognizes that code is read, modified and extended far more often than it is originally written. This emphasis means that the language and its standar practices are designed to keep the code base simple, consistent and easy to underestand over time.
+- **Maintainability**: because it recognizes that code is read, modified and extended far more often than it is originally written. This emphasis means that the language and its standar practices are designed to keep the code base simple, consistent and easy to underestand over time.
 
-**Efficiency**: beacause it was designed from the ground up to meet the demands of high-performance, modern software, especially in networked and concurrent enviroments. Key reasons: compiled to native code, ligthweigth concurrency, efficient memory management (GC), simplicity.
+- **Efficiency**: beacause it was designed from the ground up to meet the demands of high-performance, modern software, especially in networked and concurrent enviroments. Key reasons: compiled to native code, ligthweigth concurrency, efficient memory management (GC), simplicity.
 
 ---
+### Concurrency vs Parallelism
 
-### Concurrency
-Refers to the ability of a system to execute multiple task through simultaneous executions or time-sharing, managin interactions and sharing resources.
+- **Concurrency**: Refers to the ability of a system to execute multiple task through simultaneous executions or time-sharing, managin interactions and sharing resources.
 
-### Parallelism
-is the ability to excecute multiple task at the same time using multiple processors(CPUs).
+- **Parallelism**: Is the ability to excecute multiple task at the same time using multiple processors(CPUs).
+
 
 **In Go** concurrency refers to the ability to handle multiple task independently, while parallelism is about executing those task simultaneously on different CPU cores. Go's ***goroutines*** provide ligthweigth threads to run functions concurrently and the ***channels*** facilitates safe comunication between goroutines.
 
-**Goroutine**: is a ligthweigth thread of execution managed by the Go runtime.
+- **Goroutine**: is a ligthweigth thread of execution managed by the Go runtime.
 
-**Channels**: are a Data Structure that allows goroutines to communicate and synchronize with each other.
+- **Channels**: are a Data Structure that allows goroutines to communicate and synchronize with each other.
 
 ---
 
