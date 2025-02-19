@@ -21,6 +21,7 @@ is the ability to excecute multiple task at the same time using multiple process
 **In Go** concurrency refers to the ability to handle multiple task independently, while parallelism is about executing those task simultaneously on different CPU cores. Go's ***goroutines*** provide ligthweigth threads to run functions concurrently and the ***channels*** facilitates safe comunication between goroutines.
 
 **Goroutine**: is a ligthweigth thread of execution managed by the Go runtime.
+
 **Channels**: are a Data Structure that allows goroutines to communicate and synchronize with each other.
 
 ---
