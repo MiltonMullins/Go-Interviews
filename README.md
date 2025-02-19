@@ -1,30 +1,31 @@
 # Go-Interviews
 
-## History
+Go is described as a Statically-typed, compiled language designed by Google around a set of core principles that prioritize Simplicity, Readability, Maintanability and Efficiency.
 
-Go is a statically typed, compiled high-level general purpose programming language. It was designed at Google in 2009 by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but also has memory safety, garbage collection, structural typing, and [CSP](https://en.wikipedia.org/wiki/Communicating_sequential_processes)-style concurrency. It is often referred to as Golang because of its former domain name, golang.org, but its proper name is Go.
+**Simplicity**: Go's syntax is designed to be straigthfoward to keep code readable, maintainable and easy to learn. By minimizing syntactic clutter such as requiring no parentheses around conditions in control structures or forcing explicit semicolon usage, the language reduces boilerplate and allows developers to focus on the logic.
 
-Statically typed: In computer programming, a type system is a logical system comprising a set of rules that assigns a property called a type (for example, integer, floating point, string) to every term (a word, phrase, or other set of symbols). Usually the terms are various language constructs of a computer program, such as variables, expressions, functions, or modules. A type system dictates the operations that can be performed on a term. For variables, the type system determines the allowed values of that term.
+**Readability**: because is clear, straigthfoward code is easier to maintain, debug and collaborate on. This focus on readability is reflected in Go's design choices such as minimalistic syntax, enforced formating with `gofmt` and explicit error handling.
 
-Memory safety is the state of being protected from various software bugs and security vulnerabilities when dealing with memory access, such as buffer overflows and dangling pointers.
+**Maintainability**: because it recognizes that code is read, modified and extended far more often than it is originally written. This emphasis means that the language and its standar practices are designed to keep the code base simple, consistent and easy to underestand over time.
 
-Garbage Collection: In computer science, garbage collection (GC) is a form of automatic memory management. The garbage collector attempts to reclaim memory that was allocated by the program, but is no longer referenced; such memory is called garbage.
-
-**Concurrency:** In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the outcome. This allows for parallel execution of the concurrent units, which can significantly improve overall speed of the execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability of a program, algorithm, or problem into order-independent or partially-ordered components or units of computation.
-
-## Six Main points about Go
-
-- **Static Typing**: Go is statically typed, which means variable types are declared or inferred at initialization and cannot be changed without type conversion. This feature contributes to more predictable code behavior by reducing type-related errors. In Go, every variable has a defined type, providing a higher level of certainty about variable behavior. The Go specification also allows for explicit type declarations or inferred types from the assigned value.
-- **Strong Typing**: Go’s strong typing ensures that operations on variables are compatible with their types. For example, adding an integer and a string directly isn’t possible in Go, which avoids bugs that might arise from accidental data type mismatches. This is in contrast to languages like JavaScript, which are more flexible but can result in unexpected runtime behavior.
-- **Compiler and Performance**: Go compiles into machine code, resulting in a binary executable that often runs faster than interpreted languages like Python, which translates code at runtime. By pre-compiling, Go reduces runtime overhead and is thus highly suitable for tasks requiring efficient resource use and faster execution. According to benchmarks, Go is known for its speed compared to interpreted languages due to this compilation model.
-- **Fast Compilation**: Go’s compilation is optimized for speed, which enables rapid iterations during the development process. This is partly because Go has a single binary output and uses minimal abstractions in its compilation process, so code is ready to run with fewer delays.
-- **Concurrency with Goroutines**: Concurrency is a built-in feature of Go, primarily managed through goroutines and channels. Goroutines allow Go to handle multiple tasks simultaneously without the need for complex external libraries. Goroutines are lightweight and highly efficient, making Go a strong choice for applications that require concurrency, such as web servers and data processing.
-- **Simplicity and Garbage Collection**: Go’s syntax is designed to be straightforward, aiming for readability and efficiency. Go includes garbage collection, which automatically manages memory allocation and deallocation, helping to reduce the complexity of memory management. This approach aligns with Go’s design philosophy to simplify development
-
-
-# OOP Concepts in traditional OOP language vs Go
+**Efficiency**: beacause it was designed from the ground up to meet the demands of high-performance, modern software, especially in networked and concurrent enviroments. Key reasons: compiled to native code, ligthweigth concurrency, efficient memory management (GC), simplicity.
 
 ---
+
+### Concurrency
+Refers to the ability of a system to execute multiple task through simultaneous executions or time-sharing, managin interactions and sharing resources.
+
+### Parallelism
+is the ability to excecute multiple task at the same time using multiple processors(CPUs).
+
+**In Go** concurrency refers to the ability to handle multiple task independently, while parallelism is about executing those task simultaneously on different CPU cores. Go's ***goroutines*** provide ligthweigth threads to run functions concurrently and the ***channels*** facilitates safe comunication between goroutines.
+
+**Goroutine**: is a ligthweigth thread of execution managed by the Go runtime.
+**Channels**: are a Data Structure that allows goroutines to communicate and synchronize with each other.
+
+---
+
+# OOP Concepts in traditional OOP language vs Go
 
 ### **1. Classes and Objects**
 - **Java**: Classes are the blueprint for objects. Objects are instances of classes with state (fields) and behavior (methods).
