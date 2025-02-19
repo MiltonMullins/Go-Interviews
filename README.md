@@ -215,15 +215,15 @@ Example: Process A holds resource X and waits for resource Y, while Process B ho
 Key Differences:
 
 **Nature**:
-Race Condition: A timing issue that affects data consistency.
-Deadlock: A resource allocation issue that halts system progress.
+- Race Condition: A timing issue that affects data consistency.
+- Deadlock: A resource allocation issue that halts system progress.
 
 **Symptoms**:
-Race Condition: Unpredictable outcomes or corrupted data.
-Deadlock: System freeze or unresponsive behavior as processes wait indefinitely.
+- Race Condition: Unpredictable outcomes or corrupted data.
+- Deadlock: System freeze or unresponsive behavior as processes wait indefinitely.
 
 **Mitigation**:
-Race Condition: Use proper synchronization mechanisms like locks, mutexes, or atomic operations.
-Deadlock: Employ strategies such as resource ordering, deadlock detection and recovery, or avoiding circular wait conditions.
+- Race Condition: Use proper synchronization mechanisms like locks, mutexes, or atomic operations.
+- Deadlock: Employ strategies such as resource ordering, deadlock detection and recovery, or avoiding circular wait conditions.
 
 ---
