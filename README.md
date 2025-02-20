@@ -24,6 +24,32 @@ Go is described as a Statically-typed, compiled language designed by Google arou
 
 - **Channels**: are a Data Structure that allows goroutines to communicate and synchronize with each other.
 
+## Race Condition vs. Deadlock
+
+### Race Condition:
+Occurs when two or more threads or processes access shared data concurrently, and the final outcome depends on the unpredictable timing or sequence of execution.
+It can lead to inconsistent or unexpected behavior because the operations interleave in unforeseen ways.
+Example: Two threads updating the same counter without proper synchronization may result in an incorrect count.
+
+### Deadlock:
+Happens when two or more processes are each waiting for the other to release a resource, leading to a standstill where none of them can proceed.
+It is characterized by a circular dependency among processes, where each holds a resource and waits for another.
+Example: Process A holds resource X and waits for resource Y, while Process B holds resource Y and waits for resource X.
+
+Key Differences:
+
+**Nature**:
+- Race Condition: A timing issue that affects data consistency.
+- Deadlock: A resource allocation issue that halts system progress.
+
+**Symptoms**:
+- Race Condition: Unpredictable outcomes or corrupted data.
+- Deadlock: System freeze or unresponsive behavior as processes wait indefinitely.
+
+**Mitigation**:
+- Race Condition: Use proper synchronization mechanisms like locks, mutexes, or atomic operations.
+- Deadlock: Employ strategies such as resource ordering, deadlock detection and recovery, or avoiding circular wait conditions.
+
 ---
 
 # OOP Concepts in traditional OOP language vs Go
@@ -208,32 +234,3 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 4. Data
 5. Parameters
 
----
-
-## Race Condition vs. Deadlock
-
-### Race Condition:
-Occurs when two or more threads or processes access shared data concurrently, and the final outcome depends on the unpredictable timing or sequence of execution.
-It can lead to inconsistent or unexpected behavior because the operations interleave in unforeseen ways.
-Example: Two threads updating the same counter without proper synchronization may result in an incorrect count.
-
-### Deadlock:
-Happens when two or more processes are each waiting for the other to release a resource, leading to a standstill where none of them can proceed.
-It is characterized by a circular dependency among processes, where each holds a resource and waits for another.
-Example: Process A holds resource X and waits for resource Y, while Process B holds resource Y and waits for resource X.
-
-Key Differences:
-
-**Nature**:
-- Race Condition: A timing issue that affects data consistency.
-- Deadlock: A resource allocation issue that halts system progress.
-
-**Symptoms**:
-- Race Condition: Unpredictable outcomes or corrupted data.
-- Deadlock: System freeze or unresponsive behavior as processes wait indefinitely.
-
-**Mitigation**:
-- Race Condition: Use proper synchronization mechanisms like locks, mutexes, or atomic operations.
-- Deadlock: Employ strategies such as resource ordering, deadlock detection and recovery, or avoiding circular wait conditions.
-
----
