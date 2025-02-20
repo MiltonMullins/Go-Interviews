@@ -24,14 +24,14 @@ Go is described as a Statically-typed, compiled language designed by Google arou
 
 - **Channels**: are a Data Structure that allows goroutines to communicate and synchronize with each other.
 
-## Race Condition vs. Deadlock
+### Race Condition vs. Deadlock
 
-### Race Condition:
+#### Race Condition:
 Occurs when two or more threads or processes access shared data concurrently, and the final outcome depends on the unpredictable timing or sequence of execution.
 It can lead to inconsistent or unexpected behavior because the operations interleave in unforeseen ways.
 Example: Two threads updating the same counter without proper synchronization may result in an incorrect count.
 
-### Deadlock:
+#### Deadlock:
 Happens when two or more processes are each waiting for the other to release a resource, leading to a standstill where none of them can proceed.
 It is characterized by a circular dependency among processes, where each holds a resource and waits for another.
 Example: Process A holds resource X and waits for resource Y, while Process B holds resource Y and waits for resource X.
@@ -221,6 +221,14 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 - **[Redirecttion Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#redirection_messages)**(`300 - 399`)
 - **[Client Error Responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)**(`400 - 499`)
 - **[Server Error Responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses)**(`500 - 599`)
+
+#### Security
+- **Authentication** -> OAuth 2.0, JWT.
+- **Athorization** -> Role Base Access Control(RBAC).
+- **HTTPS** -> Use TLS/SSL for encryption.
+- **Rate Limit** -> Limit the number of request to prevent abuse.
+- **CORS** -> Configure Cross Origin Resourse Sharing headers to control access from diferent origins.
+- **Security Headers** -> Implement security headers like Content-Security-Policy, X-Frame-Options, etc. to mitigate various Web vulnerabilities.
 
 ##### Benefits:
 1. Scalability
