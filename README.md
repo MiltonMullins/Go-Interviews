@@ -230,6 +230,15 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 - **CORS** -> Configure Cross Origin Resourse Sharing headers to control access from diferent origins.
 - **Security Headers** -> Implement security headers like Content-Security-Policy, X-Frame-Options, etc. to mitigate various Web vulnerabilities.
 
+#### Best Practices
+- **Versioning**: Use version numbers in the URL (e.g. /v1/users) for backward compatibility.
+- **Filtering**: Use query parameters to filter resources. (e.g. /v1/users?status=active).
+- **Sorting**: Use query parameters to sort resources. (e.g. /v1/users?sort=name_asc).
+- **Pagination**: Use *limit* and *offset* for large datasets.
+- **Error Handling**: Return meaningful Error codes and messages.
+- **Documentation**: Use tools like OpenApi (Swagger) for clear, comprenhensive documentation.
+- **Caching**: Laverage Caching (server-side or client-side) to improve performance.
+
 ##### Benefits:
 1. Scalability
 2. Flexibility
