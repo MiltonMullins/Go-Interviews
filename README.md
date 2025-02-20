@@ -181,19 +181,27 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 ### REST
 
 **Representational State Transfer** is a software architecture that imposes conditions on how an API should work.
-Principles of the REST architectural style:
+##### Principles of the REST architectural style:
 1. **Statelessness**: Each request contains all the information needed to process it, and no client context is stored on the server.
 2. **Client-Server Separation**: The clien and server are independent of each other.
 3. **Uniform Interface**: Consistent and Standarized communication, typically via HTTP methods.
 4. **Cacheability**: Responses should indicate whether they can be cached for future use.
 5. **Layered System**: Architecture should allow for layers such as proxies, gateways, and load balancers.
+6. **Code on Demand**: servers cans extend client functionallity.
 
-Benefits:
+##### Status Codes
+- **[Informational Responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#informational_responses)**(`100 - 199`)
+- **[Successful Responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)**(`200 - 299`)
+- **[Redirecttion Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#redirection_messages)**(`300 - 399`)
+- **[Client Error Responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)**(`400 - 499`)
+- **[Server Error Responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses)**(`500 - 599`)
+
+##### Benefits:
 1. Scalability
 2. Flexibility
 3. Independence
 
-RESTful API request contain:
+##### RESTful API request contain:
 1. Unique Resourse Identifier (URI)
 2. Method (GET, POST, PUT, DELETE)
 3. HTTP Headers
