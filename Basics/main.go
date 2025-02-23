@@ -13,4 +13,5 @@ func main() {
 	pointersFun()
 	stringAndRunesFun()
 	methodsFun()
+	linkedListFun()
 }
