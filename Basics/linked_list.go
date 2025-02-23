@@ -26,7 +26,7 @@ type LinkedList struct {
 	length int
 }
 
-func main() {
+func linkedListFun() {
 	list := LinkedList{nil, 0}
 
 	list.insertAtHead(2)
