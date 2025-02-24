@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 /*
 Channels are the pipes that connect concurrent goroutines.
@@ -20,11 +23,28 @@ func channelsFun() {
 		The <-channel syntax receives a value from the channel.
 		Here we’ll receive the "ping" message we sent above and print it out.
 	*/
-	msg := <-messages
+	msg := <-messages //Block until we receive a notification from the goroutine.
 	fmt.Println(msg)
 	/*
 		By default sends and receives block until both the sender and receiver are ready.
 		This property allowed us to wait at the end of our program for the "ping" message
 		without having to use any other synchronization.
 	*/
+	
+	blockingFunTest()
+}
+
+func blockingFunTest() {
+	done := make(chan bool)
+
+	go func() {
+		println("Working...")
+		time.Sleep(5 * time.Second)
+		println("DONE!")
+
+		done <- false
+	}()
+
+	<-done //Block until we receive a notification from the worker on the channel.
+	fmt.Println("Test")
 }
