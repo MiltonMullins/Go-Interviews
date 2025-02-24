@@ -31,20 +31,28 @@ func channelsFun() {
 		without having to use any other synchronization.
 	*/
 	
-	blockingFunTest()
+	//blockingFunTest()
 }
 
-func blockingFunTest() {
-	done := make(chan bool)
+func main() {
+	done := make(chan bool,1)
 
 	go func() {
 		println("Working...")
-		time.Sleep(5 * time.Second)
+		time.Sleep(2 * time.Second)
 		println("DONE!")
 
-		done <- false
+		done <- true
 	}()
 
-	<-done //Block until we receive a notification from the worker on the channel.
+	//<-done //Block until we receive a notification from the worker on the channel.
 	fmt.Println("Test")
+
+	timeout := time.After(3 * time.Second)
+	select {
+	case <-done:
+		fmt.Println("Done")
+	case <-timeout:
+		fmt.Println("Timeout")
+	}
 }
