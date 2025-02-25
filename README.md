@@ -51,6 +51,13 @@ Key Differences:
 - Deadlock: Employ strategies such as resource ordering, deadlock detection and recovery, or avoiding circular wait conditions.
 
 ---
+### new() vs make()
+
+- The `new()` function in Go is a built-in function that allocates memory for a new zeroed value of a specified type and returns a pointer to it. It is primarily used for initializing and obtaining a pointer to a newly allocated zeroed value of a given type, usually for data types like structs.
+
+- The `make()` function is used for initializing slices, maps, and channels – data structures that require runtime initialization. Unlike `new()`, `make()` returns an initialized (non-zeroed) value of a specified type.
+
+---
 
 # OOP Concepts in traditional OOP language vs Go
 
