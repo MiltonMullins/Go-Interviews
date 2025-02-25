@@ -251,3 +251,63 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 4. Data
 5. Parameters
 
+---
+
+### Software Principles
+
+#### SOLID
+
+- **Single Responsibility**:la noción de que un objeto solo debería tener una única razón para cambiar.
+A class should have only reason to change, meaning that class should have only one job.
+
+  Example: payments system should only implements methods related to payments and for example not for send notifications or emails.
+- **Open/Close**: la noción de que las “entidades de software … deben estar abiertas para su extensión, pero cerradas para su modificación”.
+Software entities ... should be open for extension, but closed for modification.
+
+  Example: Shape interface with method `Area()`. And two clases `Circle` and `Rectangle` that implements this interface. If we need to add a New shape we can create a new class that implements the `shape interface` without modifying the existing classes.
+- **Liskov's Substitution**:la noción de que los “objetos de un programa deberían ser reemplazables por instancias de sus subtipos sin alterar el correcto funcionamiento del programa
+states that subclasses should be substitutable for their base classes.
+
+  This means that, given that class B is a subclass of class A, we should be able to pass an object of class B to any method that expects an object of class A and the method should not give any weird output in that case.
+
+  Rectangle and Square example violates Liskov’s Substitution principle when we override setters methods. Creating test for `getArea()`. This is because the call to **`setHeight`** function in the test is setting the width as well and results in an unexpected output.
+- **Interface Segregation**: la noción de que “muchas interfaces cliente específicas son mejores que una interfaz de propósito general”
+Clients should not be forced to depend upon interfaces that they do not use. Larger interfaces should be split into smaller ones.
+
+  Example: violation of the principle if a interface  ShapeAreaCalculator have methods `calculateArea()` and `calculateVolume()`. If a class square implements the interface then it is forced to implement the `calculateVolume()` method, which it does not need. 
+
+  To overcome this, we can segregate the interface and have two separate interfaces: one for calculating the area and another for calculating the volume. This will allow individual shapes to decide what to implement. Adding Cube class.
+- **Dependency Inversion**: la noción de que se debe “depender de abstracciones, no depender de implementaciones”.
+La Inyección de Dependencias es uno de los métodos que siguen este principio
+
+  States to classes should depend on abstraction but not on concretion.
+  In other words, you must follow abstraction and ensure loose coupling
+
+  Example: 
+
+  ```go
+  type NotificationService interface {
+	  notify(msg string)
+  }
+
+  type EmailNotification struct {}
+
+  func (EmailNotification) notify(msg string) {
+	  fmt.Println("Email notification: ", msg)
+  }
+
+  type SlackNotification struct {}
+
+  func (SlackNotification) notify(msg string) {
+	  fmt.Println("Slack notification: ", msg)
+  }
+
+  type Employee struct {
+	  notific NotificationService
+  }
+  ```
+
+  If the `Employee` class depends directly on the `EmailNotification` class, which is a low-level module. This violates the dependency inversion principle.
+
+  To ensured loose coupling. `Employee` is not dependent on any concrete implementation, rather, it depends only on the abstraction `NotificationService`.
+
