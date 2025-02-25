@@ -314,3 +314,13 @@ La Inyección de Dependencias es uno de los métodos que siguen este principio
 #### DRY -> Don't Repeat yourself
 #### YAGNI -> You Ain't Gonna Need It
 #### KISS -> Keep It Simple, Stupid!
+
+---
+
+### Testing
+
+**Software Testing can be broadly classified into 3 types:**
+
+1. **Functional Testing**: It is a type of software testing that validates the software systems against the `functional requirements`. It is performed to check whether the application is working as per the software’s functional requirements or not. Various types of functional testing are `Unit testing, Integration testing, End-to-End testing`, Smoke testing, and so on.
+2. **Non-Functional Testing**: It is a type of software testing that checks the application for `non-functional requirements` like `performance`, `scalability`, portability, stress, etc. Various types of non-functional testing are `Performance testing, Stress testing, Usability Testing`, and so on.
+3. **Maintenance Testing**: It is the process of changing, modifying, and updating the software to keep up with the customer’s needs. It involves `regression testing` that verifies that recent changes to the code have not adversely affected other previously working parts of the software.
