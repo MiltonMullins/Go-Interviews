@@ -250,6 +250,25 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 3. HTTP Headers
 4. Data
 5. Parameters
+---
+### Design Patterns
+
+GOF Patterns to address common problems in Objet Oriented Software Design. These patterns promote reusable, flexible and robust designs by offering proven solutions to recurring design challenges.
+
+Categories:
+
+- **Creational**: provide object creation mechanism that increase flexibility and reuse of existing code. For example: Singleton, Factory Method, Abstract Factory, Builder.
+- **Structural**: explain how to assemble objects and classes into a larger structures, while keeping those structures. For example: Decorator, Adapter, Repository.
+- **Behavioral**: take care of effective communication and the assigment of responsibilities between objects. For example: State, Observer, Strategy.
+
+### **What design patterns would you apply for REST APIs, and why?**
+
+- **Repository Pattern:** provides a way to manage data access code in a centralized location, thus reducing code duplication and improving code maintainability. (e.g. components The Repository Interface, The Repository Implementation, The Entity Model)
+- **Decorator Pattern:** Adds functionality to requests (e.g., authentication  middleware).
+- **Singleton Pattern:** Ensures only one instance of critical services like a  database connection pool.
+- **Builder Pattern:** For constructing complex objects, such as dynamic query  generation.
+- **Observer** **Pattern**: that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
+- **State Pattern**: that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class. The State pattern is closely related to the concept of a *Finite-State Machine.*
 
 ---
 
