@@ -311,3 +311,6 @@ La Inyección de Dependencias es uno de los métodos que siguen este principio
 
   To ensured loose coupling. `Employee` is not dependent on any concrete implementation, rather, it depends only on the abstraction `NotificationService`.
 
+#### DRY -> Don't Repeat yourself
+#### YAGNI -> You Ain't Gonna Need It
+#### KISS -> Keep It Simple, Stupid!
