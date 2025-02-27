@@ -288,10 +288,30 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 ### System Design
 System Design is all about scalability, reliability and security.
 
-**Scalability** refers to a sustem’s ability to handle increase load, whether by serving more users, procesing more transactions or managing larger data sets, without compromising performance or stability.
+  **Scalability** refers to a sustem’s ability to handle increase load, whether by serving more users, procesing more transactions or managing larger data sets, without compromising performance or stability.
 
-- **Vertical Scalability (Scaling Up)**: Enhancing the capacity of a single machine by adding more powerful hardware, without changeing the fundamental architecture or adding additional servers.
-- **Horizontal Scalability (scaling Out)**: Adding more machines or servers to a system to distribute the workload across larger number of individuals units.
+  - **Vertical Scalability (Scaling Up)**: Enhancing the capacity of a single machine by adding more powerful hardware, without changeing the fundamental architecture or adding additional servers.
+  - **Horizontal Scalability (scaling Out)**: Adding more machines or servers to a system to distribute the workload across larger number of individuals units.
+
+  ---
+**Reliability** is the ability of a system to perform its intended functions consistently and without failure over time. 
+
+  **How to achieve high reliability:**
+
+  - **Scalability and Maintainability**: It involves developing systems that will continue to work effectively as they develop and expand throughout time.
+  - **Fault Tolerance**: Consider fault tolerance while designing systems, which involves including features that can automatically identify and recover from errors.
+  - **Load Balancing**: By distributing workloads among several systems, load balancing can help prevent high traffic failures and ensure that no single system is overloaded.
+  - **Monitoring and Analytics**: Use monitoring and analytics tools to track system performance and identify potential issues before they become major problems.
+  - **Redundancy**: To help ensure that the system can continue to operate even in the event that one or more components fail, use redundancy to make sure that essential components are duplicated.
+
+  **How to measure Reliability:**
+
+  - *Uptime Percentage = ((TotalTime-Downtime) / TotalTime ) * 100*
+  - Mean Time Between Fauilures *= (Total Operational Time / Number of Failures)*
+  - Mean Time to Repair *= Total Repair Time / Number of Failures*
+  - Error Rate *= (Number of Errors / Total Transactions or Operations) * 100*
+  ---
+  
 
 ---
 ### Design Patterns
