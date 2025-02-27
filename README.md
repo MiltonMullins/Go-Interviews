@@ -282,6 +282,17 @@ While Go isn’t strictly OOP, its focus on **interfaces**, **structs**, and **c
 3. HTTP Headers
 4. Data
 5. Parameters
+
+---
+
+### System Design
+System Design is all about scalability, reliability and security.
+
+**Scalability** refers to a sustem’s ability to handle increase load, whether by serving more users, procesing more transactions or managing larger data sets, without compromising performance or stability.
+
+- **Vertical Scalability (Scaling Up)**: Enhancing the capacity of a single machine by adding more powerful hardware, without changeing the fundamental architecture or adding additional servers.
+- **Horizontal Scalability (scaling Out)**: Adding more machines or servers to a system to distribute the workload across larger number of individuals units.
+
 ---
 ### Design Patterns
 
