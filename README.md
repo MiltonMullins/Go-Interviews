@@ -310,8 +310,23 @@ System Design is all about scalability, reliability and security.
   - Mean Time Between Fauilures *= (Total Operational Time / Number of Failures)*
   - Mean Time to Repair *= Total Repair Time / Number of Failures*
   - Error Rate *= (Number of Errors / Total Transactions or Operations) * 100*
+  
   ---
   
+  **Security** in software architecture refers to the measures and practices implemented to protect the confidentiality, integrity, and availability of software systems and the data they handle. It involves designing and implementing security controls and mechanisms to defend against unauthorized access, data breaches, and other security threats.
+
+  - Authentication
+  - Authorization
+  - Encryption
+  - Vulnerability
+  - Audit & Compliance
+  - Network Security
+  - Terminal Security
+  - Emergency Responses
+  - Container Security
+  - API Security
+  - 3rd-Party Vendor Management
+  - Disaster Recovery
 
 ---
 ### Design Patterns
