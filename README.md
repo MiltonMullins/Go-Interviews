@@ -327,7 +327,6 @@ System Design is all about scalability, reliability and security.
   - API Security
   - 3rd-Party Vendor Management
   - Disaster Recovery
-
 ---
 ### Design Patterns
 
@@ -347,6 +346,23 @@ Categories:
 - **Builder Pattern:** For constructing complex objects, such as dynamic query  generation.
 - **Observer** **Pattern**: that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
 - **State Pattern**: that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class. The State pattern is closely related to the concept of a *Finite-State Machine.*
+
+---
+  ### The Clean Architecture
+
+![the clean architecture](image.png)
+
+Objective is the separation of concerns. Achieve this separation by dividing the software into layers. Each has at least one layer for business rules, and another for interfaces.
+
+Each of these architectures produce systems that are:
+
+  1. **Independent of Frameworks:** The architecture does not depend on the existence of some library of feature laden software. This allows you to use such frameworks as tools, rather than having to cram your system into their limited constraints.
+  2. **Testable:** The business rules can be tested without the UI, Database, Web Server, or any other external element.
+  3. **Independent of UI:** The UI can change easily, without changing the rest of the system. A Web UI could be replaced with a console UI, for example, without changing the business rules.
+  4. **Independent of Database:** You can swap out Oracle or SQL Server, for Mongo, BigTable, CouchDB, or something else. Your business rules are not bound to the database.
+  5. **Independent of any external agency:** In fact your business rules simply don’t know anything at all about the outside world.
+
+  The diagram at the top of this article is an attempt at integrating all these architectures into a single actionable idea.
 
 ---
 
