@@ -30,10 +30,10 @@ func dataTypesFun() {
 		32 bits in 32 bit systems and
 		64 bit in 64 bit systems
 	*/
-	var i1 int = 9223372036854775807 // -2147483648 to 2147483647 in 32 bit systems and -9223372036854775808 to 9223372036854775807 in 64 bit systems
-	var i2 int8 = 127                // -128 to 127
-	var i3 int32 = 32767             // -32768 to 32767
-	var i4 int64 = 2147483647        // -2147483648 to 2147483647
+	var i1 int = 9223372036854775807   // -2147483648 to 2147483647 in 32 bit systems and -9223372036854775808 to 9223372036854775807 in 64 bit systems
+	var i2 int8 = 127                  // -128 to 127
+	var i3 int32 = 2147483647          // -2147483648 to 2147483647
+	var i4 int64 = 9223372036854775807 // -9223372036854775808 to 9223372036854775807
 
 	fmt.Printf("Type: %T, value: %v\n", i1, i1)
 	fmt.Printf("Type: %T, value: %v\n", i2, i2)
@@ -44,8 +44,8 @@ func dataTypesFun() {
 	fmt.Println("\nuint")
 	var u1 int = 9223372036854775807 // 0 to 2147483647 in 32 bit systems and 0 to 9223372036854775807 in 64 bit systems
 	var u2 int8 = 127                // 0 to 127
-	var u3 int32 = 32767             // 0 to 32767
-	var u4 int64 = 2147483647        // 0 to 2147483647
+	var u3 int32 = 2147483647             // 0 to 2147483647
+	var u4 int64 = 9223372036854775807        // 0 to 9223372036854775807
 
 	fmt.Printf("Type: %T, value: %v\n", u1, u1)
 	fmt.Printf("Type: %T, value: %v\n", u2, u2)
