@@ -118,13 +118,18 @@ func (l *LinkedList) delete(n int) {
 }
 
 func (l *LinkedList) Reverse() {
+	// Initialize three pointers: curr, prev and next
 	var curr, prev, next *Node
 	curr = l.head
 	prev = nil
 
+	// Traverse all the nodes of Linked List
 	for curr != nil {
+		// Store next
 		next = curr.next
+		// Reverse current node's next pointer
 		curr.next = prev
+		// Move pointers one position ahead
 		prev = curr
 		curr = next
 	}
